@@ -16,12 +16,16 @@ function setup() {
 
     strokeWeight(2);
     stroke("black");
+    // gerade striche
     line(320, 470, 390, 470);
     line(420, 470, 490, 470);
+    // Nasen Strich
     line(405, 445, 405, 485);
+    //Schiefe striche
     line(320, 440, 390, 460);
     line(420, 460, 490, 440);
-    line()
+    //von Nasen Strich unten weg
+    line(405,485, 435, 500);
 
 
 
