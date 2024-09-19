@@ -11,13 +11,15 @@ function setup() {
     circle(455, 390, 30);
 
     fill("HotPink");
-    triangle(380, 430, 420, 430, 400, 445);
+    triangle(385, 430, 425, 430, 405, 445);
 
 
-    strokeWeight("2");
+    strokeWeight(2);
     stroke("black");
     line(320, 485, 390, 485);
-    line()
+    line(420, 485, 490, 485);
+    line(405, 445, 405, 485);
+    
 
 
 
