@@ -13,8 +13,11 @@ function setup() {
     fill("HotPink");
     triangle(380, 430, 420, 430, 400, 445);
 
+
+    strokeWeight("2");
     stroke("black");
-    line
+    line(320, 485, 390, 485);
+    line()
 
 
 
