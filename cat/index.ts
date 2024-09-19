@@ -28,7 +28,11 @@ function setup() {
     line(405,485, 435, 500);
     line(405, 485, 375, 500);
     //strich zu gerade strich
-    line(405, 485, 490, 470 )
+    line(435, 500, 490, 480 );
+    line(375, 500, 320, 480 );
+
+    fill("lightgrey");
+    triangle("")
 
 
 
