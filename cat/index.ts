@@ -26,7 +26,9 @@ function setup() {
     line(420, 460, 490, 440);
     //von Nasen Strich unten weg
     line(405,485, 435, 500);
-    line(505, 485, 535, 500);
+    line(405, 485, 375, 500);
+    //strich zu gerade strich
+    line(405, 485, 490, 470 )
 
 
 
