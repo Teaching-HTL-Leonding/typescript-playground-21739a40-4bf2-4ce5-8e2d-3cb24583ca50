@@ -4,18 +4,23 @@ frameRate(144);
 
 }
 
-let x = 150;
+let x = 15;
 
 function draw() {
 
 
 background("red");
 fill("yellow");
-circle(x, x, 50);
-x  += random(-10, 10);
+circle(250, 250, x);
+x++ 
+
+
+
+
 
 if (x > width) {
     x = 0;
+
 
 }
 
