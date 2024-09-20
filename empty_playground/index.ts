@@ -1,41 +1,23 @@
 function setup() {
-createCanvas(300, 300);
-background("skyblue");
-
-}
-
-function mouseClicked() {
-    
-    noStroke();
-    fill("white");
-
-    circle(mouseX, mouseY, 15);
-
-fill("skyblue");
-noStroke();
-rect(0, height- 20, width / 2, height);
-
-fill("black");
-text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5);
+createCanvas(500, 500);
 
 
 }
 
-function mouseMoved () {
+let x = 150;
+
+function draw() {
 
 
-noStroke();
-fill("line")
-circle(mouseX, mouseY, 50);
+background("red");
+fill("yellow");
+circle(x, x, 50);
+x  += random(-10, 10);
 
-
-    fill("skyblue");
-    noStroke();
-    rect(width / 2, height-20, width / 2, 20);
-
-    fill("black");
-    text(`X: ${mouseX}, Y: ${mouseY}`, 220, height- 5); 
-
+if (x > width) {
+    x = 0;
 
 }
 
+
+}
