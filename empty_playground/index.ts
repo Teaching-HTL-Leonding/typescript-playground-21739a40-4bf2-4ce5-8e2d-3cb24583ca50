@@ -4,7 +4,7 @@ frameRate(144);
 
 }
 
-let x = 15;
+let x = 0;
 
 function draw() {
 
