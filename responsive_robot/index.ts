@@ -34,7 +34,7 @@ function setup() {
 fill("white");
 rect(mouthX, mouthY, mouthwidth, mouthheight);
 
-line(linestartX, linestartY, lineendX, lineendY)
+line(linestartX + 100, linestartY, lineendX, lineendY-100)
 
 circle(lineendX, linestartY, 20);
 
