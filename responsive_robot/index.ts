@@ -1,3 +1,4 @@
+
 function setup() {
   createCanvas(400, 400);
   background("lightgray");
@@ -11,6 +12,8 @@ function setup() {
   const eyes2 = headY+headHeight*0.25
   const mouthwidth = headWidth*0.50
   const mouthheight = headHeight*0.10
+  const mouthX = headX + headWidth * 0.25; // 25% vom Kopfbreite
+  const mouthY = headY + headHeight * 0.70; // 70% vom Kopfhohe
 
 
 
@@ -24,7 +27,7 @@ function setup() {
   circle(eyes1 +100, eyes2, 40);
   
   //Mouth
-  rect(width /2 -mouthwidth *0.25, headHeight *0.30 - mouthheight);
-
+fill("white");
+rect(mouthX, mouthY, mouthwidth, mouthheight);
 
 }
