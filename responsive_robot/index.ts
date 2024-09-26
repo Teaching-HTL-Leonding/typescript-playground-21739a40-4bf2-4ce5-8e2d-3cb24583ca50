@@ -14,10 +14,10 @@ function setup() {
   const mouthheight = headHeight*0.10
   const mouthX = headX + headWidth * 0.25; 
   const mouthY = headY + headHeight * 0.70;
-  const linestartX= headWidth/ 2;
+  const linestartX= headWidth*0.50;
   const linestartY = headY - headHeight*0.25;
-  const lineendX = width*0.5
-  const lineendY = width*0.5
+  const lineendX = width*0.5;
+  const lineendY = width*0.25;
 
 
 
@@ -34,7 +34,7 @@ function setup() {
 fill("white");
 rect(mouthX, mouthY, mouthwidth, mouthheight);
 
-line(linestartX + 100, linestartY, lineendX, lineendY-100)
+line(linestartX, linestartY, lineendX, lineendY)
 
 circle(lineendX, linestartY, 20);
 
