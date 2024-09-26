@@ -12,8 +12,10 @@ function setup() {
   const eyes2 = headY+headHeight*0.25
   const mouthwidth = headWidth*0.50
   const mouthheight = headHeight*0.10
-  const mouthX = headX + headWidth * 0.25; // 25% vom Kopfbreite
-  const mouthY = headY + headHeight * 0.70; // 70% vom Kopfhohe
+  const mouthX = headX + headWidth * 0.25; 
+  const mouthY = headY + headHeight * 0.70;
+  const antennehohe = height*0.50 + width + headHeight*0.25
+  const antennebreite = 
 
 
 
@@ -29,5 +31,7 @@ function setup() {
   //Mouth
 fill("white");
 rect(mouthX, mouthY, mouthwidth, mouthheight);
+
+line (antenne +10, antenne, antenne-10, antenne);
 
 }
