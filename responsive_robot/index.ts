@@ -14,8 +14,10 @@ function setup() {
   const mouthheight = headHeight*0.10
   const mouthX = headX + headWidth * 0.25; 
   const mouthY = headY + headHeight * 0.70;
-  const antennehohe = height*0.50 + width + headHeight*0.25
-  const antennebreite = 
+  const linestartX= headWidth/ 2;
+  const linestartY = headY - headHeight*0.25
+  const lineendX = width*0.5
+  const lineendY = width*0.5
 
 
 
@@ -32,6 +34,6 @@ function setup() {
 fill("white");
 rect(mouthX, mouthY, mouthwidth, mouthheight);
 
-line (antenne +10, antenne, antenne-10, antenne);
+line(linestartX, linestartY, lineendX, lineendY)
 
 }
