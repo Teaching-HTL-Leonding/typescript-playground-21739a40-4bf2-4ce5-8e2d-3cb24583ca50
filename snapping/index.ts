@@ -12,8 +12,7 @@ function mouseMoved() {
   const x: number = Math.round(mouseX /40)*40;
   const y: number = Math.round(mouseY /40)*40;
 
-Math.round(3.6) 
-Math.round(3.4) 
+
   strokeWeight(3);
   stroke("white");
   line(x -15, y, x +15, y);
