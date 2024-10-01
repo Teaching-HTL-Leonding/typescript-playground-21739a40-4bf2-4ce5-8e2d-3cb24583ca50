@@ -1,3 +1,4 @@
+
 function setup() {
   createCanvas(200, 200);
   background("lightblue");
@@ -13,10 +14,10 @@ function mouseMoved() {
   const y: number = Math.round(mouseY /40)*40;
 
 
-  strokeWeight(3);
-  stroke("white");
-  line(x -15, y, x +15, y);
-  line(x, y-15, x, y +15);
+  strokeWeight(2.5);
+  stroke("black");
+  line(x -10, y, x +10, y);
+  line(x, y-10, x, y +10);
  
  noStroke();
 text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5);
