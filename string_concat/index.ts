@@ -4,15 +4,24 @@ function setup() {
 
 }
 
+
+let mousecordinates: string = '0/0';
+
+
 function mouseClicked() {
+background("lightblue");
 
-}
 
-function mouseMoved() {
+
 
   noStroke();
-  fill("black");
+  fill("lightgreen");
   circle(mouseX, mouseY, 20);
 
+  mousecordinates = `${mousecordinates}, ${mouseX}, ${mouseY}`;
 
+fill("black");
+  text(mousecordinates, 5, 5, width - 10, height - 10);
 }
+
+
