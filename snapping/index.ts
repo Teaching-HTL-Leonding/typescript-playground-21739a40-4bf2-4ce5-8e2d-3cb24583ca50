@@ -17,7 +17,7 @@ function mouseMoved() {
   stroke("white");
   line(x -15, y, x +15, y);
   line(x, y-15, x, y +15);
-
-  strokeWeight(1);
-  text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5);
+ 
+ noStroke();
+text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5);
 }
