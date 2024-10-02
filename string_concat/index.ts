@@ -1,31 +1,22 @@
 function setup() {
   createCanvas(200, 200);
   background("lightblue");
-
+  text(mouseProtocol, 5, 15)
 }
 
-
-let mousecordinates: string = '0/0';
-
+let mouseProtocol: string = '0/0';
 
 function mouseClicked() {
-background("lightblue");
 
+  background("lightblue");
 
-
-
+  fill("skyblue");
   noStroke();
-  fill("lightgreen");
   circle(mouseX, mouseY, 20);
 
-  mousecordinates = `${mousecordinates}, ${mouseX}/${mouseY}`;
+  mouseProtocol = `${mouseProtocol}, ${mouseX}/${mouseY}`;
 
-fill("black");
-  text(mousecordinates, 5, 5, width - 10, height - 10);
+  fill("black");
+  text(mouseProtocol, 5, 5, width - 10, height - 10);
 
-  if ( mousecordinates.length > 400 ) {
-    mousecordinates = "";
-  }
 }
-
-
