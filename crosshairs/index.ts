@@ -1,17 +1,15 @@
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(200, 200);
+  background("lightblue;");
 }
 
 function mouseMoved() {
   background("lightblue");
 
-  // Add your code here
+line(mouseX-20, mouseY, mouseX+20, mouseY);
+line(mouseX, mouseY-20, mouseX, mouseY+20);
 
 noFill();
-strokeWeight(1.5);
-circle(mouseX, mouseY, 50);
-circle(mouseX, mouseY, 22);
-line(mouseX, mouseY -30, mouseX, mouseY +30);
-line(mouseX -30, mouseY, mouseX +30, mouseY);
-
+circle(mouseX, mouseY, 15);
+circle(mouseX, mouseY, 25);
 }
