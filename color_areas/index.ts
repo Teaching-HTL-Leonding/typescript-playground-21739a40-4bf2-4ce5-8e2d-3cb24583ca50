@@ -1,3 +1,4 @@
+
 function setup() {
     createCanvas(400, 200);
     background("black");
@@ -15,6 +16,7 @@ function setup() {
 }
 
 function mouseClicked() {
+    
     let message: string;
 
     if(mouseX < width /3){
@@ -24,8 +26,18 @@ function mouseClicked() {
     } else {
         message ="Red";
     }
+
+
+
+fill("black");
+rect(0, height * 0.75, width, height * 0.25)
+
+
 textAlign(CENTER);
-text(`${message}`, width/2, 2, height*0.90);
+
+fill("white");
+textSize(35);
+text(`${message}`, 5, height*0.80, width+10, height+10);
 
 
 }
