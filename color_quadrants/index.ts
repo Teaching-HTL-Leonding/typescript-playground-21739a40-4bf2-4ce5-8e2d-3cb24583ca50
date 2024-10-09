@@ -3,9 +3,8 @@ function setup() {
     background("black");
     noStroke();
     
-    fill("black");
-    rect(width / 2 - width / 4, height / 2 - height / 6, width / 2, height / 3);
-    fill("white");
+
+   
 
 
     fill("yellow");
@@ -23,9 +22,10 @@ function setup() {
 }
 
 function mouseClicked() {
+
     fill("black");
     rect(width / 2 - width / 4, height / 2 - height / 6, width / 2, height / 3);
-    fill("white");
+    
 
     let message: string;
     
@@ -42,6 +42,7 @@ function mouseClicked() {
         message = "Blue"
     }
     
+    fill("white");
     textAlign(CENTER, CENTER);
     textSize(30);
     text(message, width / 2, height / 2);
