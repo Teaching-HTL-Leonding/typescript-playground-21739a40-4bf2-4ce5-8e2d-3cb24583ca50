@@ -1,3 +1,4 @@
+
 function setup() {
     createCanvas(400, 200);
     background("black");
@@ -7,10 +8,10 @@ function setup() {
    
 
 
-    fill("yellow");
+    fill("green");
     rect(0, height / 2, width / 2);
 
-    fill("green");
+    fill("yellow");
     rect(0, height / -2, width / 2);
 
     fill("red");
@@ -48,5 +49,3 @@ function mouseClicked() {
     text(message, width / 2, height / 2);
 
 }
-
-
