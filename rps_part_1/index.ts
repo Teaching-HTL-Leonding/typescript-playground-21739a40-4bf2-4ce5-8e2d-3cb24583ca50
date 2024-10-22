@@ -1,3 +1,4 @@
+
 // We declare constants to avoid repeating "magic numbers". 
 // These numbers are used for positioning text and icons on the canvas.
 // Note that we use all-caps for constants that represent 
@@ -27,5 +28,11 @@ function setup() {
 }
 
 function mouseMoved() {
-      if ((mouseX > 50) && (mouseX < 100 ) && (mouseY > 75) && (mouseY < 75+100))
+    strokeWeight(4);
+    stroke("yellow");
+      noFill();
+      
+      if ((mouseX > 50) && (mouseX < 100 ) && (mouseY > 75) && (mouseY < 75+100)){
+        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT)};
+        if ((mouseX))
 }
