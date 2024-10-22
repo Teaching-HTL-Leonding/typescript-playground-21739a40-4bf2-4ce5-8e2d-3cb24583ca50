@@ -33,6 +33,9 @@ function mouseMoved() {
       noFill();
       
       if ((mouseX > 50) && (mouseX < 100 ) && (mouseY > 75) && (mouseY < 75+100)){
-        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT)};
-        if ((mouseX))
+      
+    }else{
+        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT)
+
+      }
 }
