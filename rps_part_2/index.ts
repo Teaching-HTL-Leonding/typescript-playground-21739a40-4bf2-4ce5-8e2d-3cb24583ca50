@@ -51,8 +51,12 @@ function mouseMoved() {
         noFill();
         rect(SCISSORS_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
     }
-}
+    function mouseClicked() {
+        noFill();
+        strokeWeight(4);
+        stroke("yellow");
+        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
+    }
 
-function mouseClicked() {
 
 }
