@@ -5,6 +5,9 @@ const SCISSORS_LEFT = 300;
 const ICON_WIDTH = 100;
 const ICON_TOP = 75;
 const ICON_HEIGHT = 100;
+let userChoice = null;  
+let computerChoice = null;  
+let resultText = "";  
 
 function setup() {
     createCanvas(500, 490);
