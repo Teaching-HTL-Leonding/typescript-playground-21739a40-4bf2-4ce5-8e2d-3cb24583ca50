@@ -20,19 +20,12 @@ let cardname: string;
   }
   switch(cardIx){
     case 1: cardname = "A"; break;
-    case 2: cardname = "2"; break;
-    case 3: cardname = "3"; break;
-    case 4: cardname = "4"; break;
-    case 5: cardname = "5"; break;
-    case 6: cardname = "6"; break;
-    case 7: cardname = "7"; break;
-    case 8: cardname = "9"; break;
-    case 9: cardname = "10"; break;
-    case 10: cardname = "j"; break;
-    case 11: cardname = "q"; break;
+    case 10: cardname = "J"; break;
+    case 11: cardname = "Q"; break;
     case 12: cardname = "K"; break;
+    default: cardname= `${cardIx}`; break; 
   }
-  
+  cardImage = loadImage(`${BASE_URL}/${colorname}/${cardname}.png`);
 }
 
 function setup() {
@@ -41,4 +34,6 @@ function setup() {
 
   imageMode(CENTER);
   image(cardImage, width / 2, height / 2);
+
+
 }
