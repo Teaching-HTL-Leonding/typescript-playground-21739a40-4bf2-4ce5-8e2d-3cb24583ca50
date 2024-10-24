@@ -6,6 +6,8 @@ const ICON_WIDTH = 100;
 const ICON_TOP = 75;
 const ICON_HEIGHT = 100;
 
+let userChoice: number;
+
 function setup() {
     createCanvas(500, 490);
     background("black");
@@ -51,12 +53,24 @@ function mouseMoved() {
         noFill();
         rect(SCISSORS_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
     }
-    function mouseClicked() {
-        noFill();
-        strokeWeight(4);
-        stroke("yellow");
-        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
+}
+
+function mouseClicked() {
+
+    if ((mouseX > STONE_LEFT) && (mouseX < STONE_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
+        userChoice = 1
+    }
+
+    if ((mouseX > PAPER_LEFT) && (mouseX < PAPER_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
+        userChoice = 2
+    }
+    if ((mouseX > SCISSORS_LEFT) && (mouseX < SCISSORS_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
+        userChoice = 3
     }
 
 
+    textSize(30);
+    fill("yellow");
+    text(`Computer: ${userChoice}`, TEXT_LEFT, height /2 + 50)
 }
+
