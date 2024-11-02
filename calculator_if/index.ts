@@ -60,8 +60,34 @@ function mouseClicked() {
   else if(mouseX > cellWidth *2 && mouseX < cellWidth *3 && mouseY > lineHeight && mouseY < lineHeight*2){
     displayNumber += "9";
   }
-  else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight *2 && lineHeight *3 ){
+  else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight *2 && mouseY < lineHeight *3 ){
     displayNumber += "4";
   }
+  else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight*2  && mouseY < lineHeight *3 ){
+    displayNumber += "5";
 
+}
+  else if (mouseX > cellWidth*2 && mouseX < cellWidth * 3 && mouseY > lineHeight *2 && mouseY < lineHeight *3 ){
+    displayNumber += "6";
+}
+  if(mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
+    displayNumber += "1";
+  }
+  if(mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
+    displayNumber += "2";
+}
+  if(mouseX > cellWidth*2 && mouseX < cellWidth * 3 && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
+    displayNumber += "3";
+}
+  if(mouseX > 0 && mouseX < cellWidth*2 && mouseY > lineHeight*4 && mouseY < lineHeight * 5){
+    displayNumber += "0";
+  }
+
+
+
+
+  
+  if(mouseX > cellWidth*2 && mouseX < cellWidth*3&& mouseY > lineHeight*4 && mouseY < lineHeight * 5){
+    displayNumber = ""
+  }
 }
