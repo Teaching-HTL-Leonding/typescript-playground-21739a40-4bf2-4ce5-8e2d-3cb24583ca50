@@ -3,7 +3,7 @@ const MARGIN_NUM = 10;
 let num: number = 0;          // Current number entered by the user
 let lineHeight: number = 0;   // Height of a line of the responsive layout
 let cellWidth: number = 0;    // Width of a cell of the responsive layout
-
+let displayNumber: string = "";
 function setup() {
     createCanvas(300, 500);
     lineHeight = height / 5;
@@ -27,7 +27,7 @@ function draw() {
 
 
 
-    //Text
+    
     textAlign(CENTER, CENTER);
     textSize(60);
     text("0", cellWidth , lineHeight * 4.5);
@@ -41,11 +41,24 @@ function draw() {
     text("7", cellWidth / 2 , lineHeight * 1.5);
     text("8", cellWidth * 1.5 , lineHeight * 1.5);
     text("9", cellWidth * 2.5 , lineHeight * 1.5);
+
     
+  textAlign(RIGHT, CENTER);
+    textSize(40);
+    text(displayNumber, width - MARGIN_NUM, lineHeight / 2);
 
 
 }
 
 function mouseClicked() {
-  
+  if(mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight && mouseY < lineHeight * 2){
+    displayNumber += "7";
+  }
+  else if(mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight && mouseY < lineHeight *2){
+    displayNumber += "8";
+  }
+  else if(mouseX > cellWidth *2 && mouseX < cellWidth *3 && mouseY > lineHeight && mouseY < lineHeight*2){
+    displayNumber += "9";
+  }
+
 }
