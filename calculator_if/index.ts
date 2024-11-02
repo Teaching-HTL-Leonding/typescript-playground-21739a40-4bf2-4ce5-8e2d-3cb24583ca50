@@ -60,5 +60,8 @@ function mouseClicked() {
   else if(mouseX > cellWidth *2 && mouseX < cellWidth *3 && mouseY > lineHeight && mouseY < lineHeight*2){
     displayNumber += "9";
   }
+  else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight *2 && lineHeight *3 ){
+    displayNumber += "4";
+  }
 
 }
