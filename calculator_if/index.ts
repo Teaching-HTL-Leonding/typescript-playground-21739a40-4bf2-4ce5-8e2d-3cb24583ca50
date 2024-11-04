@@ -27,71 +27,66 @@ function draw() {
 
 
 
-    
+
     textAlign(CENTER, CENTER);
     textSize(60);
-    text("0", cellWidth , lineHeight * 4.5);
-    text("C", cellWidth*2.5 , lineHeight * 4.5);
-    text("1", cellWidth /2 , lineHeight * 3.5);
-    text("2", cellWidth * 1.5 , lineHeight * 3.5);
-    text("3", cellWidth * 2.5 , lineHeight * 3.5);
-    text("4", cellWidth / 2 , lineHeight * 2.5);
-    text("5", cellWidth * 1.5 , lineHeight * 2.5);
-    text("6", cellWidth * 2.5 , lineHeight * 2.5);
-    text("7", cellWidth / 2 , lineHeight * 1.5);
-    text("8", cellWidth * 1.5 , lineHeight * 1.5);
-    text("9", cellWidth * 2.5 , lineHeight * 1.5);
+    text("0", cellWidth, lineHeight * 4.5);
+    text("C", cellWidth * 2.5, lineHeight * 4.5);
+    text("1", cellWidth / 2, lineHeight * 3.5);
+    text("2", cellWidth * 1.5, lineHeight * 3.5);
+    text("3", cellWidth * 2.5, lineHeight * 3.5);
+    text("4", cellWidth / 2, lineHeight * 2.5);
+    text("5", cellWidth * 1.5, lineHeight * 2.5);
+    text("6", cellWidth * 2.5, lineHeight * 2.5);
+    text("7", cellWidth / 2, lineHeight * 1.5);
+    text("8", cellWidth * 1.5, lineHeight * 1.5);
+    text("9", cellWidth * 2.5, lineHeight * 1.5);
 
-    
-  textAlign(RIGHT, CENTER);
+
+    textAlign(RIGHT, CENTER);
     textSize(40);
     text(displayNumber, width - MARGIN_NUM, lineHeight / 2);
 
 
-//fill("white");
-//noStroke();
-//rect(MARGIN_NUM, MARGIN_NUM, width -MARGIN_NUM*2, lineHeight - MARGIN_NUM*2);
+    //fill("white");
+    //noStroke();
+    //rect(MARGIN_NUM, MARGIN_NUM, width -MARGIN_NUM*2, lineHeight - MARGIN_NUM*2);
 
 }
 
 function mouseClicked() {
-  if(mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight && mouseY < lineHeight * 2){
-    displayNumber += "7";
-  }
-  else if(mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight && mouseY < lineHeight *2){
-    displayNumber += "8";
-  }
-  else if(mouseX > cellWidth *2 && mouseX < cellWidth *3 && mouseY > lineHeight && mouseY < lineHeight*2){
-    displayNumber += "9";
-  }
-  else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight *2 && mouseY < lineHeight *3 ){
-    displayNumber += "4";
-  }
-  else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight*2  && mouseY < lineHeight *3 ){
-    displayNumber += "5";
+    if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        displayNumber += "7";
+    }
+    else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        displayNumber += "8";
+    }
+    else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        displayNumber += "9";
+    }
+    else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
+        displayNumber += "4";
+    }
+    else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
+        displayNumber += "5";
 
-}
-  else if (mouseX > cellWidth*2 && mouseX < cellWidth * 3 && mouseY > lineHeight *2 && mouseY < lineHeight *3 ){
-    displayNumber += "6";
-}
-  if(mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
-    displayNumber += "1";
-  }
-  if(mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
-    displayNumber += "2";
-}
-  if(mouseX > cellWidth*2 && mouseX < cellWidth * 3 && mouseY > lineHeight*3 && mouseY < lineHeight * 4){
-    displayNumber += "3";
-}
-  if(mouseX > 0 && mouseX < cellWidth*2 && mouseY > lineHeight*4 && mouseY < lineHeight * 5){
-    displayNumber += "0";
-  }
-
-
-
-
-  
-  if(mouseX > cellWidth*2 && mouseX < cellWidth*3&& mouseY > lineHeight*4 && mouseY < lineHeight * 5){
-    displayNumber = ""
-  }
+    }
+    else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
+        displayNumber += "6";
+    }
+    if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber += "1";
+    }
+    if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber += "2";
+    }
+    if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber += "3";
+    }
+    if (mouseX > 0 && mouseX < cellWidth * 2 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
+        displayNumber += "0";
+    }
+    if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
+        displayNumber = ""
+    }
 }
