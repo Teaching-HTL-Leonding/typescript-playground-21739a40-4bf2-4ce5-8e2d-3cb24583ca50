@@ -48,6 +48,10 @@ function draw() {
     text(displayNumber, width - MARGIN_NUM, lineHeight / 2);
 
 
+//fill("white");
+//noStroke();
+//rect(MARGIN_NUM, MARGIN_NUM, width -MARGIN_NUM*2, lineHeight - MARGIN_NUM*2);
+
 }
 
 function mouseClicked() {
