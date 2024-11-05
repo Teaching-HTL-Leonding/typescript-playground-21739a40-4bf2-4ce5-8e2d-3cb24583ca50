@@ -69,7 +69,7 @@ function mouseMoved() {
 
 
 function mouseClicked() {
-let randomNumber: number = Math.floor(random(0, 3));
+    let randomNumber: number = Math.floor(random(0, 3));
     let wahl: string = "";
     let isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
 
@@ -82,6 +82,9 @@ let randomNumber: number = Math.floor(random(0, 3));
         wahl = "✂️";
     }
     displayNumber = wahl
+    if (wahl === "") {
+        return;
+    }
 
     if (wahl !== "") {
 
@@ -100,21 +103,32 @@ let randomNumber: number = Math.floor(random(0, 3));
         text(`Your Choice: ${wahl}`, width / 4, height / 2);
 
     }
-    
+
     if (randomNumber === 0) {
         computerChoice = "🪨";
-    }else if (randomNumber === 1) {
+    } else if (randomNumber === 1) {
         computerChoice = "📃";
-    }else if (randomNumber === 2) {
+    } else if (randomNumber === 2) {
         computerChoice = "✂️";
-    }else if (computerChoice !== ""){
-    
-   
-      if (computerChoice !== "") {
-        fill("yellow");
-        text(`Computer Choice: ${computerChoice}`, width / 4, height / 2 + 40); 
     }
-   }
 
+
+    if (computerChoice !== "") {
+
+
+
+        noStroke();
+        fill("black");
+        rect(width / 100, height / 2 +60, 490, 50)
+
+        textSize(30);
+        noStroke();
+        fill("yellow");
+        text(`Computer Choice: ${computerChoice}`, width / 3.09, height / 2 + 100);
+    }
+
+    
 }
+
+
 
