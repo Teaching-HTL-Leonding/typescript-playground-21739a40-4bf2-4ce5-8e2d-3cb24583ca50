@@ -1,7 +1,3 @@
-// We declare constants to avoid repeating "magic numbers". 
-// These numbers are used for positioning text and icons on the canvas.
-// Note that we use all-caps for constants that represent 
-// configuration values to make them easy to recognize.
 const TEXT_LEFT = 30;
 const STONE_LEFT = 50;
 const PAPER_LEFT = 175;
@@ -9,10 +5,11 @@ const SCISSORS_LEFT = 300;
 const ICON_WIDTH = 100;
 const ICON_TOP = 75;
 const ICON_HEIGHT = 100;
+
 let userChoice: string = "";
-let displayNumber: string = "";
 let computerChoice: string = "";
-let gameOver: boolean = false;
+let gameOver: boolean = false;  // Neue Variable, um zu prüfen, ob das Spiel vorbei ist
+
 function setup() {
     createCanvas(500, 490);
     background("black");
@@ -30,16 +27,11 @@ function setup() {
 }
 
 function mouseMoved() {
-     if (gameOver) return;
+    if (gameOver) return;  // Deaktiviert Hover-Effekte, wenn das Spiel vorbei ist
+
     const isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
-    // This function highlights the icon currently being hovered over by the mouse.
-    // <<< Add code here to disable the hover effect once the user has made a choice
     noFill();
     strokeWeight(3);
-
-    // In the following lines of code, we repeatedly check if the mouse
-    // is vertically in the relevant area. Therefore, we calculate the boolean
-    // value once and use the variable later multiple times.
 
     // Check if the mouse is over the "stone" icon.
     if (isInVertical && mouseX >= STONE_LEFT && mouseX < STONE_LEFT + ICON_WIDTH) {
@@ -47,7 +39,6 @@ function mouseMoved() {
     } else {
         stroke("black"); // Remove highlight by drawing in black.
     }
-    // Draw a rectangle around the "stone" icon.
     rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
 
     // Same for paper
@@ -67,10 +58,9 @@ function mouseMoved() {
     rect(SCISSORS_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
 }
 
-
-
 function mouseClicked() {
-     if (gameOver) return;
+    if (gameOver) return;  // Beende die Funktion, wenn das Spiel vorbei ist
+
     let randomNumber: number = Math.floor(random(0, 3));
     let wahl: string = "";
     let isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
@@ -83,28 +73,23 @@ function mouseClicked() {
     } else if (isInVertical && mouseX >= SCISSORS_LEFT && mouseX < SCISSORS_LEFT + ICON_WIDTH) {
         wahl = "✂️";
     }
-    if (wahl === "") {
-        return;
-    }
 
-    if (wahl !== "") {
+    // Benutzerwahl aktualisieren
+    userChoice = wahl;
 
+    if (userChoice === "") return;  // Beende die Funktion, wenn keine Auswahl getroffen wurde
 
-        textAlign(CENTER, CENTER);
+    // Display user's choice
+    textAlign(CENTER, CENTER);
+    noStroke();
+    fill("black");
+    rect(width / 100, height / 2 - 30, 490, 50);  // Clear previous text area
 
-        noStroke();
-        fill("black");
-        rect(width / 100, height / 2 - 30, 490, 50)
+    fill("yellow");
+    textSize(30);
+    text(`Your Choice: ${userChoice}`, width / 4, height / 2);
 
-        noStroke()
-        fill("yellow");
-
-
-        textSize(30);
-        text(`Your Choice: ${wahl}`, width / 4, height / 2);
-
-    }
-
+    // Randomly generate computer's choice
     if (randomNumber === 0) {
         computerChoice = "🪨";
     } else if (randomNumber === 1) {
@@ -113,47 +98,31 @@ function mouseClicked() {
         computerChoice = "✂️";
     }
 
+    // Display computer's choice
+    fill("black");
+    rect(width / 100, height / 2 + 60, 490, 50);  // Clear previous text area
+    fill("yellow");
+    text(`Computer Choice: ${computerChoice}`, width / 3.09, height / 2 + 100);
 
-    if (computerChoice !== "") {
-
-
-
-        noStroke();
-        fill("black");
-        rect(width / 100, height / 2 +60, 490, 50)
-
-        textSize(30);
-        noStroke();
-        fill("yellow");
-        text(`Computer Choice: ${computerChoice}`, width / 3.09, height / 2 + 100);
-    }
- if( userChoice === computerChoice){
-    winner = "Its a Tie!"};
-
-   if (userChoice === computerChoice) {
+    // Determine the winner
+    if (userChoice === computerChoice) {
         winner = "It's a Tie!";
     } else if (
-        (userChoice === "🪨" && computerChoice === "✂️") || // Stein schlägt Schere
-        (userChoice === "📃" && computerChoice === "🪨") || // Papier schlägt Stein
-        (userChoice === "✂️" && computerChoice === "📃")    // Schere schlägt Papier
+        (userChoice === "🪨" && computerChoice === "✂️") ||
+        (userChoice === "📃" && computerChoice === "🪨") ||
+        (userChoice === "✂️" && computerChoice === "📃")
     ) {
         winner = "You Win!";
     } else {
         winner = "Computer Wins!";
     }
 
-    // Anzeige des Gewinners
+    // Display the winner
     fill("black");
-    rect(width / 100, height / 2 + 150, 490, 50);  // Löscht vorherigen Textbereich
-
+    rect(width / 100, height / 2 + 150, 490, 50);  // Clear previous text area
     fill("yellow");
     text(winner, width / 2, height / 2 + 180);
 
-
-gameOver = true;
-    userChoice = wahl
-    
+    // Set gameOver to true so no further clicks are processed
+    gameOver = true;
 }
-
-
-
