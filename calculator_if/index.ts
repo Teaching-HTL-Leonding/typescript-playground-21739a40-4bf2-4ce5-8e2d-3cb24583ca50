@@ -3,7 +3,7 @@ const MARGIN_NUM = 10;
 let num: number = 0;          // Current number entered by the user
 let lineHeight: number = 0;   // Height of a line of the responsive layout
 let cellWidth: number = 0;    // Width of a cell of the responsive layout
-let displayNumber:number= 0;
+let displayNumber: string = ""; 
 function setup() {
     createCanvas(300, 500);
     lineHeight = height / 5;
@@ -56,41 +56,41 @@ function draw() {
 
 function mouseClicked() {
     if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight && mouseY < lineHeight * 2) {
-        displayNumber =displayNumber * 10+ 7;
+        displayNumber = displayNumber + "7";
     }
     else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight && mouseY < lineHeight * 2) {
-       displayNumber =displayNumber * 10+ 8;
+        displayNumber = displayNumber + "8";
     }
     else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight && mouseY < lineHeight * 2) {
-        displayNumber =displayNumber * 10+ 9;
+        displayNumber = displayNumber + "9";
     }
     else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
-        displayNumber =displayNumber * 10+ 4;
+        displayNumber = displayNumber + "4";
     }
     else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
-        displayNumber =displayNumber * 10+ 5;
+        displayNumber = displayNumber + "5";
     }
     else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
-        displayNumber =displayNumber * 10+ 6;
+        displayNumber = displayNumber + "6";
     }
-    if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
-        displayNumber =displayNumber * 10+ 1;
+    else if (mouseX > 0 && mouseX < cellWidth && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber = displayNumber + "1";
     }
-    if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
-        displayNumber =displayNumber * 10+ 2;
+    else if (mouseX > cellWidth && mouseX < cellWidth * 2 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber = displayNumber + "2";
     }
-    if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
-        displayNumber =displayNumber * 10+ 3;
+    else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 3 && mouseY < lineHeight * 4) {
+        displayNumber = displayNumber + "3";
     }
-    if (mouseX > 0 && mouseX < cellWidth * 2 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
-        displayNumber =displayNumber * 10+ 0;
+    else if (mouseX > 0 && mouseX < cellWidth * 2 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
+        displayNumber = displayNumber + "0";
     }
-    if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
-        displayNumber = 0;
+    else if (mouseX > cellWidth * 2 && mouseX < cellWidth * 3 && mouseY > lineHeight * 4 && mouseY < lineHeight * 5) {
+        displayNumber = ""; 
     }
-     if(displayNumber > 10000000000000){
-        displayNumber = 0
-     }
-    
 
+  
+    if (displayNumber.length > 13) {
+        displayNumber = "";  
+    }
 }
