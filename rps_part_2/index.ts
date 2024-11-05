@@ -12,7 +12,7 @@ const ICON_HEIGHT = 100;
 let userChoice: string = "";
 let displayNumber: string = "";
 let computerChoice: string = "";
-
+let gameOver: boolean = false;
 function setup() {
     createCanvas(500, 490);
     background("black");
@@ -30,6 +30,7 @@ function setup() {
 }
 
 function mouseMoved() {
+     if (gameOver) return;
     const isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
     // This function highlights the icon currently being hovered over by the mouse.
     // <<< Add code here to disable the hover effect once the user has made a choice
@@ -69,10 +70,11 @@ function mouseMoved() {
 
 
 function mouseClicked() {
+     if (gameOver) return;
     let randomNumber: number = Math.floor(random(0, 3));
     let wahl: string = "";
     let isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
-
+    let winner: string = "";
 
     if (isInVertical && mouseX >= STONE_LEFT && mouseX < STONE_LEFT + ICON_WIDTH) {
         wahl = "🪨";
@@ -81,7 +83,6 @@ function mouseClicked() {
     } else if (isInVertical && mouseX >= SCISSORS_LEFT && mouseX < SCISSORS_LEFT + ICON_WIDTH) {
         wahl = "✂️";
     }
-    displayNumber = wahl
     if (wahl === "") {
         return;
     }
@@ -126,7 +127,31 @@ function mouseClicked() {
         fill("yellow");
         text(`Computer Choice: ${computerChoice}`, width / 3.09, height / 2 + 100);
     }
+ if( userChoice === computerChoice){
+    winner = "Its a Tie!"};
 
+   if (userChoice === computerChoice) {
+        winner = "It's a Tie!";
+    } else if (
+        (userChoice === "🪨" && computerChoice === "✂️") || // Stein schlägt Schere
+        (userChoice === "📃" && computerChoice === "🪨") || // Papier schlägt Stein
+        (userChoice === "✂️" && computerChoice === "📃")    // Schere schlägt Papier
+    ) {
+        winner = "You Win!";
+    } else {
+        winner = "Computer Wins!";
+    }
+
+    // Anzeige des Gewinners
+    fill("black");
+    rect(width / 100, height / 2 + 150, 490, 50);  // Löscht vorherigen Textbereich
+
+    fill("yellow");
+    text(winner, width / 2, height / 2 + 180);
+
+
+gameOver = true;
+    userChoice = wahl
     
 }
 
