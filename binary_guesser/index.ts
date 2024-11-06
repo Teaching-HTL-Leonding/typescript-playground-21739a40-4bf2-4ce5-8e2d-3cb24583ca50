@@ -7,7 +7,7 @@ let digit1: number = 0;
 let digit2: number = 0;
 let digit3: number = 0;
 let digit4: number = 0;
-//num = Math.floor(random(1,16));
+
 
   createCanvas(400, 300);
   background("black");
@@ -32,6 +32,11 @@ let digit4: number = 0;
 
 }
 
+
+
 function mouseClicked() {
+  if(mouseX > 25 && mouseX < 85 && mouseY > height /2 +25 && mouseY < height / 2 + 85){
+    digit1 = 
+  }
 
 }
