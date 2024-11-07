@@ -18,17 +18,21 @@ function setup() {
     textSize(50);
     noStroke();
     fill("yellow");
-    text(randomNumber, width / 3 - 20, height / 2 - 100)
-    text(randomNumber2, width / 2 + 20, height / 2 - 100)
+    text(randomNumber, width / 2 +50 , height / 2 - 100)
+    text(randomNumber2, width / 2 - 100 , height / 2 - 100)
+    
+    
+    
     if(randomMath = 0){
         randomOperator = "+";
-    }
-    if(randomMath = 0){
+    } else if(randomMath = 1){
         randomOperator = "-";
-    }
-    if(randomMath = 0){
-        randomOperator = "*"
+    } else if(randomMath = 2){
+        randomOperator = "*";
     };
+
+    text(randomOperator, width/2, height / 2 -100)
+    
 
     // // <<< TODO: Add your code here
 }
