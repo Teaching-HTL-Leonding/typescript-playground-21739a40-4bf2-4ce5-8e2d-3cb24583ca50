@@ -45,19 +45,19 @@ function setup() {
     } else
         if (randomMath === 1) {
             randomOperator = "-"
-            result = randomNumber - randomNumber2
+            result = randomNumber2 - randomNumber
         } else
             if (randomMath === 2) {
                 randomOperator = "*"
                 result = randomNumber * randomNumber2
             };
 
-randomPose = Math.floor(random(0,3))
+    randomPose = Math.floor(random(0, 3))
 
     if (randomPose === 0) {
         randomNumberResult = result
-    } else 
-        if (randomPose=== 1) {
+    } else
+        if (randomPose === 1) {
             randomNumberResult2 = result
         } else
             if (randomPose === 2) {
@@ -83,20 +83,29 @@ randomPose = Math.floor(random(0,3))
 function mouseClicked() {
 
 
-    if (mouseX > width / 2 + 80 && mouseX < width / 2 + 100 && mouseY > height / 2 + 20 && mouseY < height / 2 - 20) {
+    if (mouseX > width / 2 + 80 && mouseX < width / 2 + 100 && mouseY > height / 2 + 20 && mouseY < height / 2 - 20 && randomNumberResult === result) {
+        noStroke;
+        textSize(40);
+        fill("yellow");
+        text(`${result} ist Richtig!`, width / 2 - 120, height / 2 + 100);
+    }
 
+    if (mouseX > 160 && mouseX < 235 && mouseY > 160 && mouseY < 200 && randomNumberResult2 === result) {
+        noStroke();
+        textSize(40);
+        fill("yellow");
+        text(`${result} ist Richtig!`, width / 2 - 120, height / 2 + 100);
+    }
+    if (mouseX > 35 && mouseX < 120 && mouseY > 160 && mouseY < 200 && randomNumberResult2 === result) {
+        noStroke();
+        textSize(40);
+        fill("yellow");
+        text(`${result} ist Richtig!`, width / 2 - 120, height / 2 + 100);
     }
 
 
 
 
-
-
-
-
-
-
-    //if(selected === result) {
 
 }
 noStroke();
