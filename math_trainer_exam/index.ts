@@ -15,6 +15,7 @@ let isfalse: string = "";
 let selected: string = "";
 let randomPose: number = 0;
 
+
 // setup function runs once and sets up the quiz elements on the canvas
 function setup() {
     randomNumber = Math.floor(random(0, 101));
@@ -51,16 +52,16 @@ function setup() {
                 result = randomNumber * randomNumber2
             };
 
+randomPose = Math.floor(random(0,3))
 
-
-    if (randomMath === 0) {
-        randomPose = randomNumberResult
-    } else
-        if (randomMath === 1) {
-            randomPose = randomNumberResult2
+    if (randomPose === 0) {
+        randomNumberResult = result
+    } else 
+        if (randomPose=== 1) {
+            randomNumberResult2 = result
         } else
-            if (randomMath === 2) {
-                randomPose = randomNumberResult3
+            if (randomPose === 2) {
+                randomNumberResult3 = result
             }
 
 
@@ -68,11 +69,11 @@ function setup() {
 
     text(randomOperator, width / 2 - 20, height / 4);
 
-    text(randomPose, width / 4 - 50, height / 2);
+    text(randomNumberResult, width / 4 - 50, height / 2);
 
-    text(randomPose, width / 2 - 30, height / 2);
+    text(randomNumberResult2, width / 2 - 30, height / 2);
 
-    text(randomPose, width / 2 + 80, height / 2);
+    text(randomNumberResult3, width / 2 + 80, height / 2);
 
 
 
