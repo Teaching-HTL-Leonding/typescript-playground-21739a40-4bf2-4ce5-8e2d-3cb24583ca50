@@ -108,10 +108,7 @@ function mouseClicked() {
 
 
 }
-noStroke();
-fill("green");
-textSize(40);
-text(`${result} ist Richtig!`, width / 2 - 120, height / 2 + 100);
+
 
 
 // mouseMoved function displays mouse coordinates as feedback
