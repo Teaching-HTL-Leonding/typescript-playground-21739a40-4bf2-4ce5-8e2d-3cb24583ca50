@@ -3,17 +3,28 @@
 
 let randomNumber: number = 0;
 let randomNumber2: number = 0;
-let randomNumber3: number = 0;
+let randomNumberResult: number = 0;
+let randomNumberResult2: number = 0;
+let randomNumberResult3: number = 0;
 let randomMath: number = 0;
 let randomOperator: string = "";
-let result: string = "";
+let result: number = 0;
+let randomPlace: string = "";
+let correct: string = "";
+let isfalse: string = "";
+let selected: string = "";
+let randomPose: number = 0;
 
 // setup function runs once and sets up the quiz elements on the canvas
 function setup() {
     randomNumber = Math.floor(random(0, 101));
     randomNumber2 = Math.floor(random(0, 101));
     randomMath = Math.floor(random(0, 3));
-    randomNumber3 = Math.floor(random(0, 101));
+    randomNumberResult = Math.floor(random(0, 101));
+    randomNumberResult2 = Math.floor(random(0, 101));
+
+
+    // result = Math.floor()
 
     createCanvas(400, 400);
     background("black");
@@ -22,37 +33,76 @@ function setup() {
     textSize(50);
     noStroke();
     fill("yellow");
-    text(randomNumber, width / 2 + 35  , height / 2 - 100)
-    text(randomNumber2, width / 2 - 100 , height / 2 - 100)
-    
-    
-    
-    if(randomMath === 0){
+    text(randomNumber, width / 2 + 35, height / 2 - 100);
+    text(randomNumber2, width / 2 - 100, height / 2 - 100);
+
+
+
+    if (randomMath === 0) {
         randomOperator = "+"
-    }else
-    if(randomMath === 1){
-        randomOperator = "-"
-    }else
-    if(randomMath === 2){
-        randomOperator = "*"
-    };
+        result = randomNumber + randomNumber2
+    } else
+        if (randomMath === 1) {
+            randomOperator = "-"
+            result = randomNumber - randomNumber2
+        } else
+            if (randomMath === 2) {
+                randomOperator = "*"
+                result = randomNumber * randomNumber2
+            };
 
-    text(randomOperator, width/2 - 20, height / 4)
 
-    text(randomNumber, width / 4 -50, height / 2);
-    text(randomNumber2, width / 2 + 100 , height /2);
-    text(randomNumber2, width / 2 + 100 , height /2);
-    // text(randomNumber3, width/ 2 -30, height/2);
-   
-    
 
-    // // <<< TODO: Add your code here
+    if (randomMath === 0) {
+        randomPose = randomNumberResult
+    } else
+        if (randomMath === 1) {
+            randomPose = randomNumberResult2
+        } else
+            if (randomMath === 2) {
+                randomPose = randomNumberResult3
+            }
+
+
+
+
+    text(randomOperator, width / 2 - 20, height / 4);
+
+    text(randomPose, width / 4 - 50, height / 2);
+
+    text(randomPose, width / 2 - 30, height / 2);
+
+    text(randomPose, width / 2 + 80, height / 2);
+
+
+
+
 }
-
 // mouseClicked function checks if the user clicked on the correct answer
 function mouseClicked() {
-    
+
+
+    if (mouseX > width / 2 + 80 && mouseX < width / 2 + 100 && mouseY > height / 2 + 20 && mouseY < height / 2 - 20) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+    //if(selected === result) {
+
 }
+noStroke();
+fill("green");
+textSize(40);
+text(`${result} ist Richtig!`, width / 2 - 120, height / 2 + 100);
+
 
 // mouseMoved function displays mouse coordinates as feedback
 function mouseMoved() {
