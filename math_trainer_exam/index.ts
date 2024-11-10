@@ -18,6 +18,7 @@ let randomPose: number = 0;
 
 // setup function runs once and sets up the quiz elements on the canvas
 function setup() {
+    // RS: First minimum requirement not 100% correct (1..100, you: 0..100)
     randomNumber = Math.floor(random(0, 101));
     randomNumber2 = Math.floor(random(0, 101));
     randomMath = Math.floor(random(0, 3));
@@ -39,6 +40,7 @@ function setup() {
 
 
 
+    // RS: Second minimum requirement solved with if statement
     if (randomMath === 0) {
         randomOperator = "+"
         result = randomNumber + randomNumber2
@@ -82,7 +84,8 @@ function setup() {
 // mouseClicked function checks if the user clicked on the correct answer
 function mouseClicked() {
 
-
+    // RS: Third minimum requirement not solved. Condition is wrong (does not work).
+    //     Additionally, feedback in case of wrong selection has not been implemented.
     if (mouseX > width / 2 + 80 && mouseX < width / 2 + 100 && mouseY > height / 2 + 20 && mouseY < height / 2 - 20 && randomNumberResult === result) {
         noStroke;
         textSize(40);
@@ -104,7 +107,7 @@ function mouseClicked() {
     }
 
 
-
+    // RS: Please format the code before handing it in. Remove unnecessary empty lines, too.
 
 
 }
