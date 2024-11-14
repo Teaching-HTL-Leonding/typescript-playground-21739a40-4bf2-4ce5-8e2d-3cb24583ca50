@@ -11,7 +11,7 @@ function setup() {
     while(i < SIZE){
         fill("lime");
         rect(0, 2 * i - 100, SIZE, STRIPE_THICKNESS);
-        fill("black");
+        fill("yellow");
         rect(0, 2 * i - 50, SIZE, STRIPE_THICKNESS);
         i += STRIPE_THICKNESS;
     }
