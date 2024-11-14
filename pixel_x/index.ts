@@ -15,12 +15,14 @@ function setup() {
 
 
    }
-let x = GRID; 
-let 
-   while(i < SIZE - GRID && x  > GRID){
+let x = SIZE -GRID;
+let y =   GRID; 
+   while(y < SIZE - GRID && x  > GRID){
     fill("green");
-    rect(i,  x, GRID, GRID);
+    rect(y,  x - GRID, GRID, GRID);
 
     x -= GRID;
+
+    y += GRID;
    }
 }
