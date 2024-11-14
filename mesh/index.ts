@@ -12,7 +12,7 @@ function setup() {
 
   while (i < SIZE) { // Schleifenbedingung
     // Zeichne Linien von der linken Seite zum Punkt oben rechts
-    line(0, i, SIZE, MARGIN);
+    line(MARGIN, i, SIZE, MARGIN);
     i += MARGIN;
   }
 }
