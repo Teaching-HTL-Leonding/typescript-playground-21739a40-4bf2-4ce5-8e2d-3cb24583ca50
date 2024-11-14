@@ -20,7 +20,9 @@ function setup() {
         i += GRID;           // STEP 4: Update the loop variable
     }
  while(i < SIZE){
-    line()
+    line(0, i, 0, i);
+
+    i += GRID;
  }
 
     // Part 2: Draw horizontal lines
