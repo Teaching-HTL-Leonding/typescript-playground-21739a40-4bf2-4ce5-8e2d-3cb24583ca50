@@ -31,18 +31,6 @@ function setup() {
         line(GRID, i, GRID * (i / GRID), i)
         i += GRID;
     }
-
-
-
-
-
-
-
-
-
-
-
-    // Draw right part of the lines
     stroke("red");
     i = GRID;
 
@@ -50,5 +38,17 @@ function setup() {
         line(GRID * (i / GRID), i, SIZE - GRID, i);
         i += GRID
     }
-    // <<< Write your code here
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
