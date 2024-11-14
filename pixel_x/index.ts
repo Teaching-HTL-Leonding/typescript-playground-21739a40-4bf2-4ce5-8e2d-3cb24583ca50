@@ -6,14 +6,21 @@ function setup() {
     background("black");
 
     noStroke();
-    let i  = GRID; 
-    while ( i < SIZE){
-        stroke("yellow");
 
-        rect(GRID, GRID, GRID);
-        stroke("green");
-        rect(SIZE - GRID - GRID, GRID, - GRID  , GRID);
-
+   let i = GRID;
+   while( i < SIZE - GRID){
+    fill("yellow");
+    rect(i, i, GRID, GRID);
     i += GRID;
-    }
+
+
+   }
+let x = GRID; 
+let 
+   while(i < SIZE - GRID && x  > GRID){
+    fill("green");
+    rect(i,  x, GRID, GRID);
+
+    x -= GRID;
+   }
 }
