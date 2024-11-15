@@ -10,8 +10,10 @@ function setup() {
   strokeWeight(1);
   stroke("lime");
 
-  for( let i = MARGIN; i < SIZE; i += MARGIN) { // Schleifenbedingung
-    line(MARGIN, i, SIZE - MARGIN, MARGIN);
-    
+  for (let i = MARGIN; i < SIZE; i += MARGIN) { // Schleifenbedingung
+    for (let j = MARGIN; j < SIZE; j += MARGIN) { // Schleifenbedingung
+      line(MARGIN, j, SIZE - MARGIN, i);
+
+    }
   }
 }
