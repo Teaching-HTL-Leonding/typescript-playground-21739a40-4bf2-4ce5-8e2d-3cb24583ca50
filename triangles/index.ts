@@ -17,10 +17,11 @@ function setup() {
         push();
         for (let j = 0; j < SIZE; j += SIDE_LENGTH) {
             triangle(0, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH / 2, 0);
-translate(SIDE_LENGTH, 0);}
-            pop();
-            translate(0, SIDE_LENGTH);
-        
+            translate(SIDE_LENGTH, 0);
+        }
+        pop();
+        translate(0, SIDE_LENGTH);
+
 
 
 
