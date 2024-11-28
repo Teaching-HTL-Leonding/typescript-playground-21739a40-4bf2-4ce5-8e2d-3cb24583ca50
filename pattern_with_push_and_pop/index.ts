@@ -1,30 +1,28 @@
 function setup() {
     const SIZE = 400;
-    const CIRCLE_DIAMETER = 50;
-
-    createCanvas(SIZE, SIZE);
+    const SIDE_LENGTH = 50;
+ 
+    // We have an isosceles triangle ("gleichschenkeliges Dreieck").
+    // This is the formula to calculate the height of such a triangle
+    const HEIGHT = SIDE_LENGTH * Math.sqrt(3) / 2;
+ 
+    createCanvas(SIZE, HEIGHT * 9);
     background("black");
-
-    strokeWeight(3);
-    stroke("yellow");
+ 
+    strokeWeight(1);
+    stroke("cyan");
     noFill();
-
-        
-    for(let y = 0;  y <= SIZE; y += CIRCLE_DIAMETER) {
-        // Save the current origin (left-most position in the current row)
+ 
+    for (let i = 0; i <= SIZE; i += SIDE_LENGTH) {
         push();
-
-        
-        for (let x = 0; x <= SIZE; x += CIRCLE_DIAMETER) {
-            circle(0, 0, CIRCLE_DIAMETER);
-            translate(CIRCLE_DIAMETER, 0); // Move origin to the right
+        translate(-SIDE_LENGTH / 2, -SIDE_LENGTH / 2)
+        for (let j = 0; j <= SIZE; j += SIDE_LENGTH) {
+            triangle(0, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH, HEIGHT / 1.75, 0);
+            translate(SIDE_LENGTH, 0);
         }
-
-        // Restore the stored origin -> back to left-most position in the current row
+ 
         pop();
-
-        // Move one row down
-        translate(0, CIRCLE_DIAMETER);
-    
+        translate(0, SIDE_LENGTH);
+ 
     }
 }
