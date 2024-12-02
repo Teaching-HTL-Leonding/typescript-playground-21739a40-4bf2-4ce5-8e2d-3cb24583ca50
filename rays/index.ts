@@ -17,7 +17,7 @@ function mouseMoved() {
     stroke("yellow");
     line(MARGIN, i, mouseX, mouseY);
     line(SIZE - MARGIN, i, mouseX, mouseY);
-    stroke("lightgreen");
+    stroke("lime");
     line(i, MARGIN, mouseX, mouseY);
     line(i, SIZE - MARGIN, mouseX, mouseY);
 
