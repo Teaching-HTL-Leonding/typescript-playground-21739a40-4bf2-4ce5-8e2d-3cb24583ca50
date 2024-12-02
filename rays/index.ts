@@ -12,11 +12,16 @@ function mouseMoved() {
   strokeWeight(2);
 
   
-    stroke("HSB")
   let i = MARGIN
   while (i < SIZE){
+    stroke("yellow");
     line(MARGIN, i, mouseX, mouseY);
+    line(SIZE - MARGIN, i, mouseX, mouseY);
+    stroke("lightgreen");
+    line(i, MARGIN, mouseX, mouseY);
+    line(i, SIZE - MARGIN, mouseX, mouseY);
 
     i += MARGIN;
+
   }
 }
