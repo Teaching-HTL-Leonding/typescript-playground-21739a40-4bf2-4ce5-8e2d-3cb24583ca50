@@ -6,14 +6,11 @@ function setup() {
     background("black");
 
     noStroke();
-
-    for(let i = GRID; i < SIZE- GRID; i += GRID)
-    {   fill("yellow");
-        rect( i, i, GRID, GRID);
-        fill("lime");
-        rect(SIZE - i - GRID, i, GRID);
-
-        
-
+ 
+    for(let i = GRID; i < SIZE - GRID; i += GRID){
+        fill("yellow")
+        rect(i, i, GRID);
+        fill("green")
+        rect(SIZE - i -GRID, i, GRID)
     }
 }
