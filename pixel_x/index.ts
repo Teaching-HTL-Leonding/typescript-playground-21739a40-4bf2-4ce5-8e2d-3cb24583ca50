@@ -10,7 +10,6 @@ function setup() {
     for (let i = 0; i < 15; i++) {
         fill("lime")
 
-        //rect(SIZE - GRID * 2, GRID, GRID);
         rect(0, 0, GRID, GRID);
         translate(GRID, GRID);
 
