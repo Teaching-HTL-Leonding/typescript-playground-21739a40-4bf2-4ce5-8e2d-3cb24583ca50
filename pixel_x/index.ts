@@ -6,11 +6,21 @@ function setup() {
     background("black");
 
     noStroke();
- 
-    for(let i = GRID; i < SIZE - GRID; i += GRID){
+    translate(GRID, GRID);
+    for (let i = 0; i < 15; i++) {
+        fill("lime")
+
+        //rect(SIZE - GRID * 2, GRID, GRID);
+        rect(0, 0, GRID, GRID);
+        translate(GRID, GRID);
+
+    }
+    resetMatrix();
+    translate(GRID, SIZE - GRID * 2)
+    for (let x = 0; x < 15; x++) {
         fill("yellow")
-        rect(i, i, GRID);
-        fill("green")
-        rect(SIZE - i -GRID, i, GRID)
+
+        rect(0, 0, GRID, GRID);
+        translate(GRID, - GRID);
     }
 }
