@@ -1,66 +1,48 @@
-const TEXT_LEFT = 30;
-const STONE_LEFT = 50;
-const PAPER_LEFT = 175;
-const SCISSORS_LEFT = 300;
-const ICON_WIDTH = 100;
-const ICON_TOP = 75;
-const ICON_HEIGHT = 100;
-let userChoice = null;
-let computerChoice = null;
-let resultText = "";
-
 function setup() {
-    createCanvas(500, 490);
-    background("black");
+  createCanvas(400, 400);
+  background("black");
+  const num = Math.floor(random(0, 1_000_000));
 
-    fill("yellow");
-    textSize(30);
-    text("Human:", TEXT_LEFT, 50);
+  const lastDigit1 = num % 10;
+  let numWithoutLastDigit = Math.floor(num / 10);
 
-    // Display the icons for "stone", "paper", and "scissors".
-    textSize(75);
-    text(`🪨`, STONE_LEFT, 150);
-    text(`📃`, STONE_LEFT + 125, 150);
-    text(`✂️ `, STONE_LEFT + 250, 150);
-}
+  const digit2 = numWithoutLastDigit % 10;
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
-function mouseMoved() {
-    // Clear the background to avoid drawing multiple rectangles
-    background("black");
+  const digit3 = numWithoutLastDigit % 10;
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit/ 10);
 
-    // Reset the stroke and fill before drawing the text
-    noStroke();
-    fill("yellow");
+  const digit4 = numWithoutLastDigit % 10;
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
-    // Redraw the text and icons since we are clearing the canvas
-    textSize(30);
-    text("Human:", TEXT_LEFT, 50);
-    textSize(75);
-    text(`🪨`, STONE_LEFT, 150);
-    text(`📃`, STONE_LEFT + 125, 150);
-    text(`✂️ `, STONE_LEFT + 250, 150);
+  const digit5 = numWithoutLastDigit % 10;
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
-    // Check if the mouse is over the "stone" icon area
-    if ((mouseX > STONE_LEFT) && (mouseX < STONE_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
-        // Draw the rectangle when the mouse is over the stone icon
-        strokeWeight(4);
-        stroke("yellow");
-        noFill();
-        rect(STONE_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
-    }
+  const digit6 = numWithoutLastDigit % 10;
 
-    if ((mouseX > PAPER_LEFT) && (mouseX < PAPER_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
-        // Draw the rectangle when the mouse is over the stone icon
-        strokeWeight(4);
-        stroke("yellow");
-        noFill();
-        rect(PAPER_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
-    }
-    if ((mouseX > SCISSORS_LEFT) && (mouseX < SCISSORS_LEFT + ICON_WIDTH) && (mouseY > ICON_TOP) && (mouseY < ICON_TOP + ICON_HEIGHT)) {
-        // Draw the rectangle when the mouse is over the stone icon
-        strokeWeight(4);
-        stroke("yellow");
-        noFill();
-        rect(SCISSORS_LEFT, ICON_TOP, ICON_WIDTH, ICON_HEIGHT);
-    }
+
+
+  textAlign(CENTER, CENTER);
+  fill("yellow");
+  noStroke();
+  text(num, width / 2, height - 20);
+
+
+  noFill();
+  stroke("yellow");
+  rect(50, height / 2, 30, 50);
+  rect(100, height / 2, 30, 50);
+  rect(150, height / 2, 30, 50);
+  rect(200, height / 2, 30, 50);
+  rect(250, height / 2, 30, 50);
+  rect(300, height / 2, 30, 50);
+
+  fill("yellow");
+  textSize(30);
+  text(`${lastDigit1}`, 315, height / 2 + 25);
+  text(`${digit2}`, 265, height / 2 + 25);
+  text(`${digit3}`, 215, height / 2 + 25);
+  text(`${digit4}`, 165, height / 2 + 25);
+  text(`${digit5}`, 115, height / 2 + 25);
+  text(`${digit6}`, 65, height / 2 + 25);
 }
