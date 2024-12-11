@@ -6,7 +6,7 @@ function setup() {
 fill("lime  ")
 noStroke();
 textSize(20)
-text("Ich habe keine Ahnung",20, 20)
+text("Ich habe keine Ahnung, mir ist einfach langweilig",20, 20)
 
 
 
