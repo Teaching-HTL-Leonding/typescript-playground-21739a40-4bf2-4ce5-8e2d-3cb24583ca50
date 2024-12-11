@@ -1,18 +1,17 @@
-let length1 = 20;
-let SIZE = 400;
-
 function setup() {
-    createCanvas(400, 400);
-    background("black");
+    createCanvas(3000,200);
+    background("black")
 
-    for(let i = 0; i < width; i += length1 ){
-        stroke("lime    ");
-        line(i  , i, width, i)
-        stroke("yellow");
-        line(SIZE, SIZE, SIZE - i, i)
-    }
+
+fill("lime  ")
+noStroke();
+textSize(20)
+text("Ich habe keine Ahnung",20, 20)
+
+
+
+
 }
 
 function draw() {
 }
-
