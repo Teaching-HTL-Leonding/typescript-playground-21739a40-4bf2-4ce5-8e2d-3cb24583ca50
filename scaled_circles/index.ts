@@ -18,7 +18,7 @@ function setup() {
     push();
     stroke("green");
     scale(4);
-    strokeWeight(3/ 4);
+    strokeWeight(3 / 4);
     circle(50, 50, 50);
     pop();
 
