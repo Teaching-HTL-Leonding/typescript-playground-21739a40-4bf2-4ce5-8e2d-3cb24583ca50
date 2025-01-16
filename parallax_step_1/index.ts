@@ -4,6 +4,7 @@ let scaledImageWidth: number = 0;
 let scaledImageHeight: number = 0;
 let scrollPosition: number = 0;
 
+
 function preload() {
     for (let i = 0; i < winter.length; i++) {
         backgroundImages.push(loadImage(`${BASE_URL}/winter/${winter[i]}`));
@@ -23,13 +24,13 @@ function draw() {
 
 
     if (keyIsDown(39)) {
-        scrollPosition -= 5;
+        scrollPosition -= 50;
     } else if (keyIsDown(37)) {
-        scrollPosition += 5
+        scrollPosition += 50
     }
-    translate(scrollPosition, 0);
-
+let step = scrollPosition /backgroundImages.length;
     for (let i = 0; i < backgroundImages.length; i++) {
+        translate(step,0);
         image(backgroundImages[i], -scaledImageWidth, 0, scaledImageWidth , scaledImageHeight);
         image(backgroundImages[i], 0, 0, scaledImageWidth, scaledImageHeight);
         image(backgroundImages[i], scaledImageWidth, 0, scaledImageWidth, scaledImageHeight);
