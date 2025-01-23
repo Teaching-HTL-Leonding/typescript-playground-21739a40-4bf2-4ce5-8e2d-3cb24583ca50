@@ -8,16 +8,27 @@ const AVG_TEMP_JOHANNESBURG: number[] = [
 
 function setup() {
   createCanvas(460, 300);
+  
 
   // <<< Call the functions in the following order:
   // 1. Draw temperatures (gets AVG_TEMP_LINZ or AVG_TEMP_JOHANNESBURG as parameter)
   // 2. Draw axes
   // 3. Draw Y labels
   // 4. Draw X labels
+  strokeWeight(5);
+  stroke("black");
+  line(50, 400, 50, 20);
+
+  line(10, 400, 400, 10)
+ 
+
+ // for(let i = 0; i < 1; i++){
+//    drawAxes
+ // }
+  
 }
 
 function drawAxes() {
-  // <<< Add code to draw X and Y axes here
 }
 
 function drawYLabels() {
@@ -25,7 +36,7 @@ function drawYLabels() {
 }
 
 function drawXLabels() {
-  // <<< Add code to draw labels for the X axis here
+
 }
 
 function drawTemperatures(temperatures: number[]) {
