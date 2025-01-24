@@ -6,6 +6,21 @@ const AVG_TEMP_JOHANNESBURG: number[] = [
   20, 20, 18, 15, 12, 9, 9, 12, 16, 18, 18, 19,
 ];
 
+const monthnames: string[] = [
+"Jan",
+"Feb",
+"Mar",
+"Apr",
+"May",
+"Jun",
+"Jul",
+"Aug",
+"Sep",
+"Oct",
+"Nov",
+"Dec"
+]
+
 function setup() {
   createCanvas(460, 300);
 
@@ -13,6 +28,7 @@ function setup() {
   // 1. Draw temperatures (gets AVG_TEMP_LINZ or AVG_TEMP_JOHANNESBURG as parameter)
   // 2. Draw axes
   // 3. Draw Y labels
+  drawXLabels();
   drawYLabels();
   drawAxes();
 }
@@ -49,12 +65,26 @@ function drawYLabels() {
     fill("black");
     text(i, 40, y);
     pop();
-}
+  }
 }
 
 function drawXLabels() {
 
-for(let i = )
+  for (let i = 1; i <= 12; i++) {
+    let xLabels = 50 + i * 30;
+
+
+    push();
+    strokeWeight(2);
+    line(xLabels, 220, xLabels, 230);
+    pop();
+
+    text(monthnames[i - 1], xLabels - 25, 210);
+
+    rect(i, i[-1], 20 )
+
+  }
+
 
 }
 
