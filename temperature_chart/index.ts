@@ -43,7 +43,7 @@ const AVG_TEMP_LINZ: number[] = [
       text(t, 40, y);
       pop();
     }
-  
+    
     pop();
   }
   
@@ -119,6 +119,7 @@ const AVG_TEMP_LINZ: number[] = [
       let x = 50 + i * 30;
       let y = 225 - temperatures[i] * 5;
       rect(x + 5, y, 20, temperatures[i] * 5);
+      
     }
   }
   
