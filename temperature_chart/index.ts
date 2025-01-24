@@ -7,18 +7,18 @@ const AVG_TEMP_JOHANNESBURG: number[] = [
 ];
 
 const monthnames: string[] = [
-"Jan",
-"Feb",
-"Mar",
-"Apr",
-"May",
-"Jun",
-"Jul",
-"Aug",
-"Sep",
-"Oct",
-"Nov",
-"Dec"
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
 ]
 
 function setup() {
@@ -27,7 +27,7 @@ function setup() {
   // <<< Call the functions in the following order:
   // 1. Draw temperatures (gets AVG_TEMP_LINZ or AVG_TEMP_JOHANNESBURG as parameter)
   // 2. Draw axes
-  // 3. Draw Y labels
+  drawTemperatures();
   drawXLabels();
   drawYLabels();
   drawAxes();
@@ -81,13 +81,22 @@ function drawXLabels() {
 
     text(monthnames[i - 1], xLabels - 25, 210);
 
-    rect(i, i[-1], 20 )
-
   }
 
 
 }
 
-function drawTemperatures(temperatures: number[]) {
-  // <<< Add code to draw the temperatures here
+function drawTemperatures() {
+
+  for (let i = 0; i < AVG_TEMP_JOHANNESBURG.length; i++) {
+
+    push();
+    noStroke();
+    fill("gold");
+    rect(30 * i + 55, 225, 20, AVG_TEMP_JOHANNESBURG[i]* -1 * 5);
+    pop();
+
+  }
+
+
 }
