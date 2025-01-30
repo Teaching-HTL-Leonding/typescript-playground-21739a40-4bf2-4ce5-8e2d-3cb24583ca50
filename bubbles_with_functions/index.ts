@@ -17,14 +17,12 @@ circle_interval = setInterval(addRandomCircle, waiting_time);
 function draw() {
   background("black");
 
-  // <<< Add code here
-}
-
-// <<< Add functions here
 for (let i = 0; circles_x.length; i++) {
 
   circle(circles_x[i], circles_y[i], circles_diameter[i])
 }
+}
+
 
 function addRandomCircle() {
   circles_x.push(random(0, width));
