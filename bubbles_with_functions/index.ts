@@ -10,6 +10,10 @@ let points = 0;
 
 function setup() {
   createCanvas(300, 300);
+  background("black");
+  strokeWeight(2);
+  stroke("lime");
+  noFill();
 
 circle_interval = setInterval(addRandomCircle, waiting_time);
 }
