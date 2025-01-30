@@ -43,6 +43,5 @@ function isInside(){
 }
 
 function mouseClicked(){
-  
+
 }
- 
